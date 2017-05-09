@@ -43,6 +43,6 @@ defmodule Raptor.Worker do
   end
 
   def start_link do
-    {:ok, _} = Plug.Adapters.Cowboy.http Raptor.Server, []
+    {:ok, _} = Plug.Adapters.Cowboy.http Raptor.Worker, []
   end
 end
