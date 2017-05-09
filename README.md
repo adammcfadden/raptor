@@ -1,19 +1,31 @@
 # Raptor
 
-**TODO: Add description**
+A static server written in Elixir.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `raptor` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [{:raptor, "~> 0.1.0"}]
-end
+```
+git clone git@github.com:adammcfadden/raptor.git
+cd raptor
+mix deps.get
+mix release
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/raptor](https://hexdocs.pm/raptor).
+A prompt will pop up with options of how to run the release build
 
+A release will be created for unix and windows within the `_build/dev/rel/bin` folder.
+
+## Development
+
+To test the app in Development
+```
+iex -S mix
+```
+then navigate to localhost:4000
+
+## Testing
+
+To run the tests:
+```
+mix test
+```
