@@ -1,5 +1,9 @@
 version: build{build}
 
+branches:
+  except:
+    - /.*-windows/
+
 install:
   - cinst elixir
   - SET PATH=C:\ProgramData\chocolatey\lib\Elixir\bin;%PATH%
