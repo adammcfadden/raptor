@@ -1,5 +1,7 @@
 # Raptor
 
+[![Build Status](https://travis-ci.org/adammcfadden/raptor.svg?branch=master)](https://travis-ci.org/adammcfadden/raptor)
+
 A static server written in Elixir.
 
 ## Installation
