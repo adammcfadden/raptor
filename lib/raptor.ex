@@ -22,6 +22,9 @@ defmodule Raptor.Worker do
   @moduledoc """
   Raptor.Worker serves up static files at localhost:4000
   It serves it's current location as the root
+
+  Directory to be served is configured based on OS, as windows and unix run
+  the app with different root locations
   """
 
   use Plug.Builder
@@ -30,7 +33,7 @@ defmodule Raptor.Worker do
 
   plug Plug.Static,
   at: "/",
-  from: "."
+  from: if (elem(:os.type(),0) == :win32), do: "../../../", else: "../"
 
   plug :not_found
 
