@@ -30,7 +30,7 @@ defmodule Raptor.Worker do
 
   plug Plug.Static,
   at: "/",
-  from: File.cwd!
+  from: "."
 
   plug :not_found
 
