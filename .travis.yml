@@ -1,0 +1,14 @@
+language: elixir
+elixir: 1.4.2
+otp_release: 18.2.1
+
+install:
+  - mix deps.get
+
+script:
+  - mix test
+  - MIX_ENV=prod mix release
+
+notifications:
+  recipients:
+    - mcfadden.113@gmail.com
