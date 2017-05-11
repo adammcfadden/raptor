@@ -24,6 +24,10 @@ Windows and Unix releases are both published here, and will have the same versio
 * enter `raptor\bin\raptor.bat start`
   * this will start the raptor service
   * raptor will serve at localhost:4000
+* optional: setup automatic restart of the service if windows is restarted
+  * enter `raptor\bin\raptor.bat describe`
+  * copy the InternalServiceName (will start with raptor)
+  * enter `sc config <InternalServiceName> start=delayed-auto`
 
 #### Unix
 
