@@ -13,9 +13,6 @@ build_script:
   - set MIX_ENV=prod
   - mix release
 
-after_build:
-  - 7z a raptor.zip %APPVEYOR_BUILD_FOLDER%\_build\prod\rel\raptor\*
-
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)-windows
   description: 'Raptor windows release'
@@ -30,6 +27,5 @@ deploy:
     appveyor_repo_tag: true
 
 artifacts:
-  - path: raptor.zip
+  - path: .\_build\prod\rel\raptor\releases\0.1.0\raptor.tar.gz
     name: raptor
-    type: zip

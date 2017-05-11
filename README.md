@@ -16,9 +16,10 @@ Windows and Unix releases are both published here, and will have the same versio
 
 #### Windows
 
-* Download `raptor.zip` from [Releases](https://github.com/adammcfadden/raptor/releases).
-* unzip `raptor.zip` and place the unzipped version in the folder that you wish to serve
-* go to that folder's location with Administrator command prompt
+* Download `raptor.tar.gz` from [Releases](https://github.com/adammcfadden/raptor/releases).
+* unpack `raptor.tar.gz` into a folder named `raptor`
+* place the raptor folder into the directory that you want to serve
+* go to the directory you want to serve with Administrator command prompt
 * enter `raptor\bin\raptor.bat install`
   * this installs raptor as a windows service
 * enter `raptor\bin\raptor.bat start`
@@ -31,9 +32,10 @@ Windows and Unix releases are both published here, and will have the same versio
 
 #### Unix
 
-* Download `raptor.zip` from [Releases](https://github.com/adammcfadden/raptor/releases).
-* unzip `raptor.zip` and place the unzipped version in the folder that you wish to serve
-* go to that folder's location with terminal
+* Download `raptor.tar.gz` from [Releases](https://github.com/adammcfadden/raptor/releases).
+* navigate to the directory you want to serve
+* create a raptor dir `mkdir raptor`
+* unpack `raptor.tar.gz` into the raptor folder `tar xf raptor.tar.gz -C raptor/`
 * enter `raptor/bin/raptor start`
   * This will start raptor as a daemon process
   * raptor will serve at localhost:4000

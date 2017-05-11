@@ -8,9 +8,6 @@ install:
 script:
 - mix test
 - MIX_ENV=prod mix release
-- cd ./_build/prod/rel/raptor
-- zip -r ../../../../raptor.zip ./
-- cd ../../../../
 notifications:
   recipients:
   - mcfadden.113@gmail.com
@@ -19,7 +16,7 @@ deploy:
   skip_cleanup: true
   api_key:
     secure: e89Hie8yNx4FF3LIMoETDa/2c1Mg3GdjWaYhzc9qgyjo8dK3XJBBQpzEYg0WP6J+5pcwv61iRPZoRn61TD8i7gSgyRIbooWUhsXQts1ilARUhUndk7+N4tI676tFK6dlI5xEwrbvpAky/lFzoHU4+iQll0KM10YXDMZ2TkB4di2w8FT4ZCn8iztUv5fTih7dOiUtxQNjLrvkClCG9YVXYSMnn0qIS1EDzQE7WuIbLh9yFWut2s2EtllWzQ8vbyHWxeUAKgWOWBypdUMbwk5w+Ph/aliPWcdDQeoSSFTPHjAeUYrMTTToP4yIIXwFs6c6w+ymIeW9ThToLIUYARsMEDDxrj/eTM2QColf6NdEfKXM4CmJLSVkJCfmoN3FHgRBA3p8sGVyeidUTSyqlPEC/TC09dEi2kcbVdEJzU06YB+2XBGzVFD+sMwHTEA1Fc4BNrg9uLmWHH0Rvsk/WdzU6BZ8OEZnc7dMxl++lfEhHKyqCn2jRKwpqdB4OthW5vwgW5kCdx2HVbKAz5zxCktpn2hBim5a8gx01PL8AgF8jPsPL/HINzbFkr3Gm+rw3T5WXTkk+7EJ0ZxtvuTEdaod9lkN1nrPYG7Sz6KlQn6Y8Tiy7BIVC7tp6BNMx3WNyzSp+7KAxkmAdmnuMnQa80kuCdF2eLlbvyXSWU2yhKP1OMw=
-  file: raptor.zip
+  file: ./_build/prod/rel/raptor/releases/0.1.0/raptor.tar.gz
   on:
     repo: adammcfadden/raptor
     tags: true
