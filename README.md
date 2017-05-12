@@ -24,7 +24,7 @@ Windows and Unix releases are both published here, and will have the same versio
   * this installs raptor as a windows service
 * enter `raptor\bin\raptor.bat start`
   * this will start the raptor service
-  * raptor will serve at localhost:4000
+  * raptor will serve at localhost:4001
 * optional: setup automatic restart of the service if windows is restarted
   * enter `raptor\bin\raptor.bat describe`
   * copy the InternalServiceName (will start with raptor)
@@ -38,7 +38,7 @@ Windows and Unix releases are both published here, and will have the same versio
 * unpack `raptor.tar.gz` into the raptor folder `tar xf raptor.tar.gz -C raptor/`
 * enter `raptor/bin/raptor start`
   * This will start raptor as a daemon process
-  * raptor will serve at localhost:4000
+  * raptor will serve at localhost:4001
 
 ### From source
 
@@ -57,13 +57,22 @@ A prompt will pop up with options of how to run the release build
 
 A release will be created within the `_build/dev/rel/bin` folder. You need to be on a windows machine for windows build, and a unix machine for a unix build
 
+## Configuration
+
+#### Updating the port
+
+* Navigate to the raptor directory
+* Open the file `sys.config`
+* update the `cowboy_port` setting `{cowboy_port,4001}` will serve the app at port 4001.
+* restart raptor
+
 ## Development
 
 To test the app in Development
 ```
 iex -S mix
 ```
-then navigate to localhost:4000
+then navigate to localhost:4001
 
 ## Testing
 

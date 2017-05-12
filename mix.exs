@@ -17,7 +17,8 @@ defmodule Raptor.Mixfile do
     [
       applications: [:cowboy, :plug],
       extra_applications: [:logger],
-      mod: {Raptor.Server, []}
+      mod: {Raptor.Server, []},
+      env: [cowboy_port: 4001]
     ]
   end
 

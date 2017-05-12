@@ -46,6 +46,8 @@ defmodule Raptor.Worker do
   end
 
   def start_link do
-    {:ok, _} = Plug.Adapters.Cowboy.http Raptor.Worker, []
+    port = Application.get_env(:raptor, :cowboy_port, 4001)
+
+    {:ok, _} = Plug.Adapters.Cowboy.http Raptor.Worker, [], port: port
   end
 end
