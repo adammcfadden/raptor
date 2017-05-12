@@ -43,5 +43,6 @@ release :raptor do
   set applications: [
     :runtime_tools
   ]
-end
 
+  plugin Conform.ReleasePlugin
+end

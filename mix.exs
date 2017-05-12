@@ -15,9 +15,10 @@ defmodule Raptor.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [
-      applications: [:cowboy, :plug],
+      applications: [:cowboy, :plug, :conform],
       extra_applications: [:logger],
-      mod: {Raptor.Server, []}
+      mod: {Raptor.Server, []},
+      env: [cowboy_port: 4001]
     ]
   end
 
@@ -34,7 +35,8 @@ defmodule Raptor.Mixfile do
     [
       {:cowboy, "~> 1.0.0"},
       {:plug, "~> 1.0"},
-      {:distillery, "~> 1.0"}
+      {:distillery, "~> 1.0"},
+      {:conform, "~> 2.2"}
     ]
   end
 end
